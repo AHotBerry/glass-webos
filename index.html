@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusOS // Web Environment</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="desktop">
+        <header id="status-bar">
+            <div class="status-left">
+                <span class="system-badge"><i class="fa-solid fa-terminal"></i> GlassOS v1.0</span>
+                <span id="active-window-title">Desktop</span>
+            </div>
+            <div class="status-right">
+                <span id="live-clock">00:00:00</span>
+            </div>
+        </header>
+
+        <div id="icon-grid">
+            <div class="desktop-icon" onclick="openApp('notepad')">
+                <i class="fa-solid fa-note-sticky app-icon-symbol"></i>
+                <span>Notes.app</span>
+            </div>
+            <div class="desktop-icon" onclick="openApp('weather')">
+                <i class="fa-solid fa-cloud-sun app-icon-symbol"></i>
+                <span>Weather.wx</span>
+            </div>
+            <div class="desktop-icon" onclick="openApp('terminal')">
+                <i class="fa-solid fa-rectangle-code app-icon-symbol"></i>
+                <span>Terminal</span>
+            </div>
+        </div>
+
+        <div id="window-layer"></div>
+
+        <nav id="dock">
+            <button class="dock-item" onclick="openApp('notepad')" title="Notes"><i class="fa-solid fa-note-sticky"></i></button>
+            <button class="dock-item" onclick="openApp('weather')" title="Weather"><i class="fa-solid fa-cloud-sun"></i></button>
+            <button class="dock-item" onclick="openApp('terminal')" title="Terminal"><i class="fa-solid fa-rectangle-code"></i></button>
+            <div class="dock-divider"></div>
+            <button class="dock-item" onclick="minimizeAll()" title="Show Desktop"><i class="fa-solid fa-desktop"></i></button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
