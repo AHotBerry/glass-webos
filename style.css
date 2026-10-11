@@ -100,3 +100,140 @@ body {
     text-align: center;
     text-shadow: 0 1px 2px rgba(0,0,0,0.8);
 }
+
+#window-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.os-window {
+    position: absolute;
+    width: 480px;
+    height: 360px;
+    background: var(--window-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--window-border);
+    border-radius: 10px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+
+.os-window.focused {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(88, 166, 255, 0.3);
+}
+
+.window-header {
+    height: 38px;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid var(--window-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    cursor: grab;
+}
+
+.window-header:active {
+    cursor: grabbing;
+}
+
+.window-title {
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.control-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%B;
+    border: none;
+    cursor: pointer;
+}
+
+.control-btn.close { background: #ff5f56; }
+.control-btn.minimize { background: #ffbd2e; }
+.control-btn.maximize { background: #27c93f; }
+
+.window-body {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+#dock {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--dock-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--window-border);
+    padding: 8px 16px;
+    border-radius: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.dock-item {
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-size: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.dock-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
+}
+
+.dock-divider {
+    width: 1px;
+    height: 24px;
+    background: var(--window-border);
+}
+
+.notes-textarea {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+}
+
+.terminal-output {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: #7ee787;
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
