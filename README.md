@@ -4,6 +4,8 @@ A modular, browser-based desktop environment and interactive dashboard built wit
 
 ![NexusOS Preview](https://img.shields.io/badge/status-active-success.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
+![GlassOS Desktop Preview](https://raw.githubusercontent.com/AHotBerry/glass-webos/main/GlassOSWeb.png)
+
 ## 🌟 Features
 
 * **Draggable Window Manager:** Smooth z-index stacking, custom window focus management, and fluid mouse-drag logic.
