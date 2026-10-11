@@ -22,6 +22,16 @@ A modular, browser-based desktop environment and interactive dashboard built wit
 
 ---
 
+## 🗺️ Roadmap & Future Improvements
+
+[⚙️] Add a file explorer app with folder nesting.
+
+[❌] Implement customizable desktop wallpaper themes.
+
+[❌] Add a mini audio player widget with local track support.
+
+[❌] Support window resizing controls.
+
 ## 🚀 Getting Started Locally
 
 To run this project locally on your machine, follow these simple steps:
@@ -29,3 +39,6 @@ To run this project locally on your machine, follow these simple steps:
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/your-username/glass-webos.git](https://github.com/your-username/glass-webos.git)
+
+## 📄 License
+This project is open-source and available under the MIT License.
